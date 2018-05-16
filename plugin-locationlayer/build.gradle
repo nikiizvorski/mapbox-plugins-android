@@ -14,7 +14,7 @@ android {
   }
 
   configurations {
-    javadocDeps
+    //javadocDeps
   }
 
   lintOptions {
@@ -54,10 +54,10 @@ dependencies {
   testImplementation dependenciesList.junit
   testImplementation dependenciesList.mockito
 
-  javadocDeps dependenciesList.mapboxMapSdk
+  //javadocDeps dependenciesList.mapboxMapSdk
 }
 
-apply from: 'javadoc.gradle'
-apply from: "${rootDir}/gradle/mvn-push-android.gradle"
-apply from: "${rootDir}/gradle/checkstyle.gradle"
-apply from: "${rootDir}/gradle/jacoco.gradle"
+//apply from: 'javadoc.gradle'
+//apply from: "${rootDir}/gradle/mvn-push-android.gradle"
+//apply from: "${rootDir}/gradle/checkstyle.gradle"
+//apply from: "${rootDir}/gradle/jacoco.gradle"
