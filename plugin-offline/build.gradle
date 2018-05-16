@@ -11,20 +11,8 @@ android {
     consumerProguardFiles 'proguard-consumer.pro'
   }
 
-  configurations {
-    javadocDeps
-  }
-
   lintOptions {
     abortOnError false
-  }
-
-  testOptions {
-    unitTests.all {
-      jacoco {
-        includeNoLocationClasses = true
-      }
-    }
   }
 
   // Avoid naming conflicts
@@ -50,11 +38,4 @@ dependencies {
   testImplementation dependenciesList.junit
   testImplementation dependenciesList.mockito
   testImplementation dependenciesList.androidArchCore
-
-  javadocDeps dependenciesList.mapboxMapSdk
 }
-
-apply from: 'javadoc.gradle'
-apply from: "${rootDir}/gradle/mvn-push-android.gradle"
-apply from: "${rootDir}/gradle/checkstyle.gradle"
-apply from: "${rootDir}/gradle/jacoco.gradle"
